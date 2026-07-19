@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Básico -->
+    <title>Luciano Duffecky Perdona | Front-End & Engenharia de Software</title>
+    <meta name="description" content="Portfólio de Luciano Duffecky Perdona, Desenvolvedor Front-End e estudante de Engenharia de Software. Construindo interfaces rápidas e modernas.">
+    <meta name="keywords" content="Desenvolvedor, Front-End, Engenharia de Software, HTML, CSS, JavaScript, Python, UI, UX, Portfolio">
+    <meta name="author" content="Luciano Duffecky Perdona">
+
+    <!-- Open Graph (Compartilhamento no WhatsApp, LinkedIn, etc) -->
+    <meta property="og:title" content="Luciano Duffecky | Portfólio">
+    <meta property="og:description" content="Design com propósito. Código com precisão. Veja meus projetos recentes.">
+    <meta property="og:type" content="website">
+    <!-- Adicione o link real do seu site aqui depois do deploy -->
+    <meta property="og:url" content="https://seusite.com.br"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&family=Oswald:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="navbar">
+        <div class="logo">LDP<span>.</span></div>
+        <nav class="nav-links" aria-label="Navegação principal">
+            <a href="#about">SOBRE</a>
+            <a href="#projects">PROJETOS</a>
+            <a href="#contato">CONTATO</a>
+        </nav>
+        <div class="social-links">
+            <!-- TARGET BLANK com NOOPENER NOREFERRER (Segurança e nova aba) -->
+            <a href="https://github.com/kecomecas" target="_blank" rel="noopener noreferrer" aria-label="Acessar GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/luciano_duffecky?igsh=MThpaHU4ejN1emcxNw==" target="_blank" rel="noopener noreferrer" aria-label="Acessar Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- SEÇÃO HERO -->
+        <section class="hero" id="home">
+            <div class="hero-bg" aria-hidden="true"></div>
+            
+            <div class="hero-content">
+                <div class="hero-top-info">
+                    <p class="mono-label">FRONT-END DEVELOPER<br>SOFTWARE ENGINEERING</p>
+                    <p class="mono-label right">BASED IN<br>BRAZIL</p>
+                </div>
+
+                <!-- Título GIGANTE sem acento -->
+                <h1 class="massive-title reveal"><span class="text-blue">LUCIANO</span><br>DUFFECKY<br>PERDONA</h1>
+                
+                <div class="hero-bottom-info reveal">
+                    <div class="hero-desc">
+                        <p class="highlight-text">DESIGN COM PROPÓSITO. CÓDIGO COM PRECISÃO.</p>
+                        <p class="muted">Construindo interfaces rápidas, modernas e escaláveis. Transformo ideias complexas em soluções digitais simples e brutais.</p>
+                    </div>
+                    <a href="#contato" class="btn-primary">START A PROJECT <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO BENTO GRID -->
+        <section class="bento-section" id="about">
+            <div class="container bento-grid">
+                
+                <article class="bento-card card-about reveal">
+                    <div class="card-header">
+                        <i class="fa-solid fa-user-astronaut" aria-hidden="true"></i> <span class="mono-label">MISSÃO</span>
+                    </div>
+                    <h2>DESIGN COM PROPÓSITO.<br>CÓDIGO COM PRECISÃO.</h2>
+                    <p>Transformo ideias complexas em soluções digitais simples e bonitas. Minha paixão é unir UI/UX interativo com um desenvolvimento limpo para entregar experiências engajadoras.</p>
+                </article>
+
+                <article class="bento-card card-edu reveal">
+                    <div class="card-header">
+                        <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> <span class="mono-label">FORMAÇÃO</span>
+                    </div>
+                    <h2>ENGENHARIA DE SOFTWARE</h2>
+                    <span class="badge">EM ANDAMENTO</span>
+                    <p class="mt-1">Foco em arquitetura de sistemas, metodologias ágeis e algoritmos otimizados.</p>
+                </article>
+
+                <article class="bento-card card-skills reveal">
+                    <div class="card-header">
+                        <i class="fa-solid fa-code" aria-hidden="true"></i> <span class="mono-label">TECH STACK</span>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span>HTML/CSS</span> <i class="fa-solid fa-check text-blue" aria-hidden="true"></i></li>
+                        <li><span>JAVASCRIPT (ES6+)</span> <i class="fa-solid fa-check text-blue" aria-hidden="true"></i></li>
+                        <li><span>UI/UX DESIGN</span> <i class="fa-solid fa-check text-blue" aria-hidden="true"></i></li>
+                    </ul>
+                </article>
+
+                <article class="bento-card card-python reveal">
+                    <div class="card-header">
+                        <i class="fa-brands fa-python" aria-hidden="true"></i> <span class="mono-label">PROCESSAMENTO</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-info">
+                            <span>PYTHON</span>
+                            <span class="text-blue">45%</span>
+                        </div>
+                        <div class="progress-bar-bg" aria-hidden="true">
+                            <div class="progress-bar-fill" id="py-bar"></div>
+                        </div>
+                        <p class="mono-label muted mt-1">> Status: Aprendizado backend...</p>
+                    </div>
+                </article>
+
+                <article class="bento-card card-git reveal">
+                    <div class="card-header">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i> <span class="mono-label">VERSIONAMENTO</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-info">
+                            <span>GIT & GITHUB</span>
+                            <span class="text-blue">67%</span>
+                        </div>
+                        <div class="progress-bar-bg" aria-hidden="true">
+                            <div class="progress-bar-fill" id="git-bar"></div>
+                        </div>
+                        <p class="mono-label muted mt-1">> Status: Fluxo de trabalho ativo...</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO PROJETOS -->
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="mono-label text-blue">SELECTED WORK</span>
+                    <h2 class="section-title">PROJETOS RECENTES</h2>
+                </div>
+
+                <div class="projects-list">
+                    <a href="#" class="project-row reveal" aria-label="Ver projeto Ecosync Dashboard">
+                        <div class="proj-num">01</div>
+                        <div class="proj-details">
+                            <h3>ECOSYNC DASHBOARD</h3>
+                            <p>Interface de monitoramento de dados.</p>
+                            <span class="tech-tag">HTML / CSS</span>
+                        </div>
+                        <div class="proj-image-container">
+                            <div class="proj-image img-1" role="img" aria-label="Imagem do projeto Ecosync"></div>
+                        </div>
+                        <div class="proj-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
+                    </a>
+
+                    <a href="#" class="project-row reveal" aria-label="Ver projeto Cosmic Explorer">
+                        <div class="proj-num">02</div>
+                        <div class="proj-details">
+                            <h3>COSMIC EXPLORER</h3>
+                            <p>Consumo de API da NASA em tempo real.</p>
+                            <span class="tech-tag">JAVASCRIPT / API</span>
+                        </div>
+                        <div class="proj-image-container">
+                            <div class="proj-image img-2" role="img" aria-label="Imagem do projeto Cosmic"></div>
+                        </div>
+                        <div class="proj-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
+                    </a>
+
+                    <a href="#" class="project-row reveal" aria-label="Ver projeto Data Jungle">
+                        <div class="proj-num">03</div>
+                        <div class="proj-details">
+                            <h3>DATA JUNGLE</h3>
+                            <p>Análise de biomas com visualização de dados.</p>
+                            <span class="tech-tag">JS & PYTHON</span>
+                        </div>
+                        <div class="proj-image-container">
+                            <div class="proj-image img-3" role="img" aria-label="Imagem do projeto Data Jungle"></div>
+                        </div>
+                        <div class="proj-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contato">
+        <div class="container reveal">
+            <h2 class="massive-footer-title">CRAFTING THE<br><span class="text-blue">EXTRAORDINARY.</span></h2>
+            
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <p class="mono-label text-blue">GET IN TOUCH</p>
+                    <!-- E-mail padrão sempre usa mailto: (abre o cliente de email do usuário) -->
+                    <a href="mailto:LucianoDuffeckyPerdona@proton.me" class="footer-link">LucianoDuffeckyPerdona@proton.me</a>
+                    <!-- WhatsApp sempre nova guia -->
+                    <a href="https://wa.me/5547933866426" class="footer-link" target="_blank" rel="noopener noreferrer">+55 (47) 933866426</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="mono-label">&copy; 2026 LUCIANO DUFFECKY PERDONA.</p>
+                <p class="mono-label">READY TO HIRE</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
