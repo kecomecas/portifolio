@@ -104,7 +104,8 @@ h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
     padding: 8rem 1.5rem 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center; 
+    overflow: hidden; 
 }
 
 .hero-bg {
@@ -120,6 +121,36 @@ h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
     pointer-events: none;
 }
 
+/* --- O SEGREDO: FITA DE CANTO COM WRAPPER --- */
+.ribbon-wrapper {
+    position: absolute;
+    /* Inicia EXATAMENTE na linha onde o cabeçalho termina (Altura do Navbar = 5.25rem) */
+    top: 5.25rem; 
+    right: 0;
+    width: 140px;
+    height: 140px;
+    overflow: hidden; /* Corta tudo o que sair desse quadrado (Linhas retas perfeitas!) */
+    z-index: 10;
+    pointer-events: none; 
+}
+
+.corner-ribbon {
+    position: absolute;
+    top: 25px;
+    right: -45px;
+    width: 190px; /* A fita vaza do wrapper propositalmente para não mostrar os cantos quadrados */
+    background-color: #eab308;
+    color: #000000;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 0.4rem 0;
+    transform: rotate(45deg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
 .hero-content {
     position: relative;
     z-index: 2;
@@ -130,20 +161,12 @@ h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
     flex: 1;
 }
 
-.hero-top-info {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid var(--border-color);
-    padding-top: 1rem;
-}
-.right { text-align: right; }
-
 .massive-title {
     font-family: 'Anton', sans-serif;
     font-size: clamp(3.5rem, 12vw, 12rem); 
     line-height: 0.85;
     letter-spacing: -2px;
-    margin: 2rem 0;
+    margin: auto 0; 
     color: var(--text-light);
 }
 
@@ -173,7 +196,7 @@ h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
     font-family: 'Space Mono', monospace;
     font-size: 0.95rem;
     font-weight: bold;
-    border-radius: 8px; /* Cantos arredondados */
+    border-radius: 8px; 
     transition: all 0.3s ease;
     width: max-content;
     gap: 1rem;
@@ -184,7 +207,7 @@ h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
     background-color: #123bb5;
 }
 
-/* ================= BENTO GRID (Aprimorado) ================= */
+/* ================= BENTO GRID ================= */
 .bento-section { padding: 4rem 0; position: relative; z-index: 2;}
 
 .bento-grid {
@@ -197,8 +220,8 @@ h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
     position: relative;
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 16px; /* BORDAS MAIS ARREDONDADAS */
-    overflow: hidden; /* Importante para o brilho não vazar */
+    border-radius: 16px; 
+    overflow: hidden; 
     transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -208,23 +231,20 @@ h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* Efeito Mouse Glow (Brilho que segue o mouse) */
 .bento-card::before {
     content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    /* O JS atualiza as variáveis --mouse-x e --mouse-y */
     background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(25, 75, 251, 0.15), transparent 40%);
     opacity: 0;
     transition: opacity 0.3s ease;
-    pointer-events: none; /* Para não atrapalhar o clique e seleção */
+    pointer-events: none; 
     z-index: 0;
 }
 .bento-card:hover::before {
     opacity: 1;
 }
 
-/* Garante que os textos e ícones fiquem por cima do brilho */
 .card-content {
     position: relative;
     padding: 2.5rem;
@@ -264,7 +284,6 @@ h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
     align-items: center;
 }
 
-/* Círculos de Progresso (Python / Git) */
 .course-container {
     display: flex;
     justify-content: space-between;
@@ -283,7 +302,6 @@ h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    /* Utiliza variavel --progress alterada pelo JS */
     background: conic-gradient(var(--accent-blue) calc(var(--progress) * 1%), var(--border-color) 0);
     display: flex;
     align-items: center;
@@ -293,9 +311,9 @@ h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
 .circular-progress::before {
     content: "";
     position: absolute;
-    inset: 4px; /* Espessura da linha (quanto menor o inset, mais grossa) */
+    inset: 4px; 
     border-radius: 50%;
-    background-color: var(--card-bg); /* Cor interna para furar o centro */
+    background-color: var(--card-bg); 
 }
 
 .progress-value {
@@ -304,7 +322,6 @@ h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
     font-size: 1rem;
     color: var(--text-light);
 }
-
 
 /* ================= PROJETOS ================= */
 .projects-section { padding: 4rem 0 8rem; }
@@ -324,7 +341,7 @@ h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
     transition: background 0.3s, padding-left 0.3s;
 }
 .project-row:hover {
-    background: rgba(10, 10, 10, 0.5); /* Fundo sutil */
+    background: rgba(10, 10, 10, 0.5);
     padding-left: 1rem;
 }
 
@@ -351,7 +368,7 @@ h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
     height: 200px;
     overflow: hidden;
     border: 1px solid var(--border-color);
-    border-radius: 12px; /* Combina com o bento grid novo */
+    border-radius: 12px;
 }
 .proj-image {
     width: 100%;
@@ -431,8 +448,6 @@ h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
 }
 
 /* ================= RESPONSIVIDADE ================= */
-
-/* TABLET / IPAD (768px+) */
 @media (min-width: 768px) {
     .nav-links { display: block; }
     
@@ -455,9 +470,21 @@ h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
     .proj-details { width: 40%; padding-right: 2rem;}
     .proj-image-container { width: 40%; height: 150px; }
     .proj-arrow { display: block; width: 10%; text-align: right; font-size: 1.5rem; }
+    
+    /* Amplia a fita amarela e o wrapper para Desktop */
+    .ribbon-wrapper {
+        width: 180px;
+        height: 180px;
+    }
+    .corner-ribbon {
+        top: 35px;
+        right: -55px;
+        width: 250px;
+        font-size: 0.85rem;
+        padding: 0.5rem 0;
+    }
 }
 
-/* NOTEBOOK / PC (1024px+) */
 @media (min-width: 1024px) {
     .bento-section { padding: 6rem 0; }
     
