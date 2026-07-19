@@ -10,11 +10,10 @@
     <meta name="keywords" content="Desenvolvedor, Front-End, Engenharia de Software, HTML, CSS, JavaScript, Python, UI, UX, Portfolio">
     <meta name="author" content="Luciano Duffecky Perdona">
 
-    <!-- Open Graph (Compartilhamento no WhatsApp, LinkedIn, etc) -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Luciano Duffecky | Portfólio">
     <meta property="og:description" content="Design com propósito. Código com precisão. Veja meus projetos recentes.">
     <meta property="og:type" content="website">
-    <!-- Adicione o link real do seu site aqui depois do deploy -->
     <meta property="og:url" content="https://seusite.com.br"> 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,14 +34,12 @@
             <a href="#contato">CONTATO</a>
         </nav>
         <div class="social-links">
-            <!-- TARGET BLANK com NOOPENER NOREFERRER (Segurança e nova aba) -->
             <a href="https://github.com/kecomecas" target="_blank" rel="noopener noreferrer" aria-label="Acessar GitHub"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.instagram.com/luciano_duffecky?igsh=MThpaHU4ejN1emcxNw==" target="_blank" rel="noopener noreferrer" aria-label="Acessar Instagram"><i class="fa-brands fa-instagram"></i></a>
         </div>
     </header>
 
     <main>
-        
         <!-- SEÇÃO HERO -->
         <section class="hero" id="home">
             <div class="hero-bg" aria-hidden="true"></div>
@@ -53,7 +50,6 @@
                     <p class="mono-label right">BASED IN<br>BRAZIL</p>
                 </div>
 
-                <!-- Título GIGANTE sem acento -->
                 <h1 class="massive-title reveal"><span class="text-blue">LUCIANO</span><br>DUFFECKY<br>PERDONA</h1>
                 
                 <div class="hero-bottom-info reveal">
@@ -70,63 +66,78 @@
         <section class="bento-section" id="about">
             <div class="container bento-grid">
                 
+                <!-- MISSÃO -->
                 <article class="bento-card card-about reveal">
-                    <div class="card-header">
-                        <i class="fa-solid fa-user-astronaut" aria-hidden="true"></i> <span class="mono-label">MISSÃO</span>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class="fa-solid fa-user-astronaut" aria-hidden="true"></i> <span class="mono-label">MISSÃO</span>
+                        </div>
+                        <h2>DA LÓGICA À INTERFACE.</h2>
+                        <p>Não crio apenas telas, desenvolvo soluções. Como futuro Engenheiro de Software, minha missão é unir a solidez estrutural do back-end com a criatividade do front-end, entregando aplicações rápidas, escaláveis e focadas na experiência do usuário.</p>
                     </div>
-                    <h2>DESIGN COM PROPÓSITO.<br>CÓDIGO COM PRECISÃO.</h2>
-                    <p>Transformo ideias complexas em soluções digitais simples e bonitas. Minha paixão é unir UI/UX interativo com um desenvolvimento limpo para entregar experiências engajadoras.</p>
                 </article>
 
+                <!-- FORMAÇÃO -->
                 <article class="bento-card card-edu reveal">
-                    <div class="card-header">
-                        <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> <span class="mono-label">FORMAÇÃO</span>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> <span class="mono-label">FORMAÇÃO</span>
+                        </div>
+                        <h2>ENGENHARIA DE SOFTWARE SMART</h2>
+                        <span class="badge">1º ANO</span>
+                        <p class="mt-1">Atualmente cursando o 1º ano no centro universitário UGV (Canoinhas - SC). Construindo uma base sólida em lógica de programação, algoritmos e fundamentos da engenharia de sistemas.</p>
                     </div>
-                    <h2>ENGENHARIA DE SOFTWARE</h2>
-                    <span class="badge">EM ANDAMENTO</span>
-                    <p class="mt-1">Foco em arquitetura de sistemas, metodologias ágeis e algoritmos otimizados.</p>
                 </article>
 
+                <!-- SKILLS -->
                 <article class="bento-card card-skills reveal">
-                    <div class="card-header">
-                        <i class="fa-solid fa-code" aria-hidden="true"></i> <span class="mono-label">TECH STACK</span>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class="fa-solid fa-code" aria-hidden="true"></i> <span class="mono-label">TECH STACK</span>
+                        </div>
+                        <ul class="skill-list">
+                            <li><span>HTML/CSS</span> <i class="fa-solid fa-check text-blue" aria-hidden="true"></i></li>
+                            <li><span>JAVASCRIPT (ES6+)</span> <i class="fa-solid fa-check text-blue" aria-hidden="true"></i></li>
+                            <li><span>UI/UX DESIGN</span> <i class="fa-solid fa-check text-blue" aria-hidden="true"></i></li>
+                        </ul>
                     </div>
-                    <ul class="skill-list">
-                        <li><span>HTML/CSS</span> <i class="fa-solid fa-check text-blue" aria-hidden="true"></i></li>
-                        <li><span>JAVASCRIPT (ES6+)</span> <i class="fa-solid fa-check text-blue" aria-hidden="true"></i></li>
-                        <li><span>UI/UX DESIGN</span> <i class="fa-solid fa-check text-blue" aria-hidden="true"></i></li>
-                    </ul>
                 </article>
 
+                <!-- PYTHON -->
                 <article class="bento-card card-python reveal">
-                    <div class="card-header">
-                        <i class="fa-brands fa-python" aria-hidden="true"></i> <span class="mono-label">PROCESSAMENTO</span>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress-info">
-                            <span>PYTHON</span>
-                            <span class="text-blue">45%</span>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class="fa-brands fa-python" aria-hidden="true"></i> <span class="mono-label">PROCESSAMENTO</span>
                         </div>
-                        <div class="progress-bar-bg" aria-hidden="true">
-                            <div class="progress-bar-fill" id="py-bar"></div>
+                        <div class="course-container">
+                            <div class="course-info">
+                                <h3 class="course-title">PYTHON</h3>
+                                <p class="mono-label muted mt-1">EM PROGRESSO</p>
+                            </div>
+                            <!-- O anel circular será animado via script.js -->
+                            <div class="circular-progress py-circle" style="--progress: 0;">
+                                <span class="progress-value">45%</span>
+                            </div>
                         </div>
-                        <p class="mono-label muted mt-1">> Status: Aprendizado backend...</p>
                     </div>
                 </article>
 
+                <!-- GIT & GITHUB -->
                 <article class="bento-card card-git reveal">
-                    <div class="card-header">
-                        <i class="fa-brands fa-github" aria-hidden="true"></i> <span class="mono-label">VERSIONAMENTO</span>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress-info">
-                            <span>GIT & GITHUB</span>
-                            <span class="text-blue">67%</span>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i> <span class="mono-label">VERSIONAMENTO</span>
                         </div>
-                        <div class="progress-bar-bg" aria-hidden="true">
-                            <div class="progress-bar-fill" id="git-bar"></div>
+                        <div class="course-container">
+                            <div class="course-info">
+                                <h3 class="course-title">GIT & GITHUB</h3>
+                                <p class="mono-label muted mt-1">EM PROGRESSO</p>
+                            </div>
+                            <!-- O anel circular será animado via script.js -->
+                            <div class="circular-progress git-circle" style="--progress: 0;">
+                                <span class="progress-value">67%</span>
+                            </div>
                         </div>
-                        <p class="mono-label muted mt-1">> Status: Fluxo de trabalho ativo...</p>
                     </div>
                 </article>
 
@@ -142,7 +153,7 @@
                 </div>
 
                 <div class="projects-list">
-                    <a href="#" class="project-row reveal" aria-label="Ver projeto Ecosync Dashboard">
+                    <a href="#" class="project-row reveal">
                         <div class="proj-num">01</div>
                         <div class="proj-details">
                             <h3>ECOSYNC DASHBOARD</h3>
@@ -150,12 +161,12 @@
                             <span class="tech-tag">HTML / CSS</span>
                         </div>
                         <div class="proj-image-container">
-                            <div class="proj-image img-1" role="img" aria-label="Imagem do projeto Ecosync"></div>
+                            <div class="proj-image img-1" role="img"></div>
                         </div>
                         <div class="proj-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
                     </a>
 
-                    <a href="#" class="project-row reveal" aria-label="Ver projeto Cosmic Explorer">
+                    <a href="#" class="project-row reveal">
                         <div class="proj-num">02</div>
                         <div class="proj-details">
                             <h3>COSMIC EXPLORER</h3>
@@ -163,12 +174,12 @@
                             <span class="tech-tag">JAVASCRIPT / API</span>
                         </div>
                         <div class="proj-image-container">
-                            <div class="proj-image img-2" role="img" aria-label="Imagem do projeto Cosmic"></div>
+                            <div class="proj-image img-2" role="img"></div>
                         </div>
                         <div class="proj-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
                     </a>
 
-                    <a href="#" class="project-row reveal" aria-label="Ver projeto Data Jungle">
+                    <a href="#" class="project-row reveal">
                         <div class="proj-num">03</div>
                         <div class="proj-details">
                             <h3>DATA JUNGLE</h3>
@@ -176,7 +187,7 @@
                             <span class="tech-tag">JS & PYTHON</span>
                         </div>
                         <div class="proj-image-container">
-                            <div class="proj-image img-3" role="img" aria-label="Imagem do projeto Data Jungle"></div>
+                            <div class="proj-image img-3" role="img"></div>
                         </div>
                         <div class="proj-arrow"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
                     </a>
@@ -194,10 +205,12 @@
             <div class="footer-grid">
                 <div class="footer-info">
                     <p class="mono-label text-blue">GET IN TOUCH</p>
-                    <!-- E-mail padrão sempre usa mailto: (abre o cliente de email do usuário) -->
-                    <a href="mailto:LucianoDuffeckyPerdona@proton.me" class="footer-link">LucianoDuffeckyPerdona@proton.me</a>
-                    <!-- WhatsApp sempre nova guia -->
-                    <a href="https://wa.me/5547933866426" class="footer-link" target="_blank" rel="noopener noreferrer">+55 (47) 933866426</a>
+                    <a href="mailto:LucianoDuffeckyPerdona@proton.me" class="footer-link">
+                        <i class="fa-solid fa-envelope"></i> LucianoDuffeckyPerdona@proton.me
+                    </a>
+                    <a href="https://wa.me/5547933866426" class="footer-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i> +55 (47) 933866426
+                    </a>
                 </div>
             </div>
             

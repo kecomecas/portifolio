@@ -1,8 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    // ============================================
+    // EFEITO DO MOUSE GLOW (BENTO CARDS)
+    // ============================================
+    const bentoCards = document.querySelectorAll('.bento-card');
+
+    bentoCards.forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            // Calcula a posição do mouse em relação ao card
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // Passa as coordenadas para as variáveis no CSS
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        });
+    });
+
+    // ============================================
+    // ANIMAÇÃO DE APARECER E CIRCULAR PROGRESS
+    // ============================================
     const reveals = document.querySelectorAll('.reveal');
 
-    // Threshold de 15% para que dispare de forma suave
+    // Função que preenche o círculo de porcentagem de forma fluida
+    function animateCircularProgress(element, targetPercentage) {
+        let current = 0;
+        const increment = targetPercentage / 40; // Controla a velocidade (passos)
+        
+        const interval = setInterval(() => {
+            current += increment;
+            if (current >= targetPercentage) {
+                current = targetPercentage;
+                clearInterval(interval);
+            }
+            // Altera a variável CSS que o conic-gradient do CSS está escutando
+            element.style.setProperty('--progress', current);
+        }, 20); // Tempo em milissegundos por frame
+    }
+
     const revealOptions = {
         threshold: 0.15,
         rootMargin: "0px 0px -40px 0px"
@@ -15,27 +51,27 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 entry.target.classList.add('active');
                 
-                // Anima a barra do Python apenas se ela existir na tela
+                // Anima o círculo do Python
                 if (entry.target.classList.contains('card-python')) {
-                    const pyBar = document.getElementById('py-bar');
-                    if(pyBar) {
+                    const pyCircle = entry.target.querySelector('.py-circle');
+                    if(pyCircle) {
                         setTimeout(() => {
-                            pyBar.style.width = '45%';
-                        }, 500); 
+                            animateCircularProgress(pyCircle, 45); // Vai até 45%
+                        }, 400); 
                     }
                 }
                 
-                // Anima a barra do Git & GitHub
+                // Anima o círculo do Git & GitHub
                 if (entry.target.classList.contains('card-git')) {
-                    const gitBar = document.getElementById('git-bar');
-                    if(gitBar) {
+                    const gitCircle = entry.target.querySelector('.git-circle');
+                    if(gitCircle) {
                         setTimeout(() => {
-                            gitBar.style.width = '67%';
-                        }, 600); // 100ms depois do Python para criar uma cascata visual
+                            animateCircularProgress(gitCircle, 67); // Vai até 67%
+                        }, 600); // Demora 200ms a mais que o python
                     }
                 }
 
-                // Para de observar depois da primeira animação (Performance Otimizada)
+                // Para de observar depois da primeira animação para não sobrecarregar
                 observer.unobserve(entry.target);
             }
         });
